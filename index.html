@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>JS Practice</title>
+</head>
+<body>
+    <section>
+        <h2>Checkbox</h2>
+       <label><input type="checkbox" id="check" onchange="checkFun()">Click for change</label>
+    </section>
+    <section>
+        <h2>Radiobutton</h2>
+        <label><input type="radio" name="r" value="0">0</label>
+        <label><input type="radio" name="r" value="1">1</label>
+        <label><input type="radio" name="r" value="2">2</label>
+        <button onclick="radioFun()">Click!</button>
+    </section>
+    <section>
+        <h2>Range</h2>
+        <input type="range" min="0" max="100" id="rng" oninput="rangeFun()">
+        <div class="inputLine" id="inputline"><p id="rngtext"></p></div>
+    </section>
+    <section>
+        <h2>Border Radius</h2>
+        <div class="topBlock">
+            <p>Верхний левый угол
+                <input type="range" min="0" max="100" value="0" id="rtl" oninput="borderFun()">
+                <input type="text" value="0" id="ttl">
+            </p>
+            <p>Верхний правый угол
+                <input type="range" min="0" max="100" value="0" id="rtr" oninput="borderFun()">
+                <input type="text" value="0" id="ttr">
+            </p>
+            <p>Нижний левый угол
+                <input type="range" min="0" max="100" value="0" id="rbl" oninput="borderFun()">
+                <input type="text" value="0" id="tbl">
+            </p>
+            <p>Нижний правый угол
+                <input type="range" min="0" max="100" value="0" id="rbr" oninput="borderFun()">
+                <input type="text" value="0" id="tbr">
+            </p>
+        </div>
+        <div id="borderBlock"></div>
+    </section>
+   <section>
+        <h2>Menu</h2>
+        <div id="nav">
+            <div class="menu-item">
+                Меню 1
+                <div class="submenu">
+                    Подменю
+                </div></div>
+            <div class="menu-item">
+                Меню 2
+                <div class="submenu">
+                    Подменю
+                </div></div>
+            <div class="menu-item">
+                Меню 3
+                <div class="submenu">
+                    Подменю
+                </div></div>
+        </div><br>
+    </section>
+    <section>
+        <h2>Tabs</h2>
+        <div id="tabs">
+            <div class="tab whiteborder">Tab 1</div>
+            <div class="tab">Tab 2</div>
+            <div class="tab">Tab 3</div>
+            <div class="content">tabContent 1</div>
+            <div class="content">tabContent 2</div>
+            <div class="content">tabContent 3</div>
+        </div>
+    </section>
+    <section>
+        <h2>Open Modal</h2>
+        <button id="btnModal">Click</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>   
+                <p>Modal window</p> 
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Animation</h2>
+        <button onclick="myMove()">Animation</button>
+        <div id="myContainer">
+            <div id="myAnimation"></div>
+        </div>
+    </section>
+    <!-- <section>
+        <h2>Slider</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade" id="mySlides">
+                <div class="numbertext">1/3</div>
+                <img src="img/stadion2.jpg" style="width: 100%" alt="">
+                <div class="text">Text 1</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2/3</div>
+                <img src="img/stadion3.jpg" style="width: 100%" alt="">
+                <div class="text">Text 2</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3/3</div>
+                <img src="img/stadion4.jpg" style="width: 100%" alt="">
+                <div class="text">Text 3</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+        </div>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section> -->
+    <section>
+        <h2>List</h2>
+        <input type="text" onkeyup="listFun()" id="listInput" placeholder="Search for names">
+        <ul id="myUl">
+            <li><a href="" class="listLink">A</a></li>
+            <li><a href="">Alex</a></li>
+            <li><a href="">Annie</a></li>
+            <li><a href="" class="listLink">B</a></li>
+            <li><a href="">Bob</a></li>
+            <li><a href="">Bonnie</a></li>
+            <li><a href="" class="listLink">C</a></li>
+            <li><a href="">Chris</a></li>
+            <li><a href="">Chloe</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Calculator</h2>
+        <p>Number 1: <input type="text" id="n1"></p>
+        <p>Number 2: <input type="text" id="n2"></p>
+        <button onclick="plus()">+</button>
+        <button onclick="minus()">-</button>
+        <button onclick="multiply()">*</button>
+        <button onclick="split()">/</button>
+        <p id="out">Answer:</p>
+    </section>
+    <section>
+        <h2>Modal Image</h2>
+        <img src="img/stadion2.jpg" id="myImg" width="300" height="200" alt="Stadion">
+        <div id="modalImg1" class="modalImg">
+            <span class="close-x" onclick="document.getElementById('modalImg').style.display='none'">&times;</span>
+            <img class="imgContent" id="img01">
+            <div id="caption"></div>
+        </div>
+    </section>
+    <section>
+        <h2>ProgressBar</h2>
+        <div id="myProgress">
+            <div id="myBar">
+                <div id="lbl">10%</div>
+            </div>
+        </div>
+        <button onclick="progress()">Click</button>
+    </section>
+    <section>
+        <h2>Popup text</h2>
+        <div class="popupButton" onclick="popupText()">Click me!
+            <span class="popupText" id="popupText">Lorem ipsum dolor sit amet.</span>
+        </div>
+    </section>
+    <section>
+        <h2>Accordion</h2>
+        <button class="accordion">Block 1</button>
+        <div class="panel"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, autem?</p></div>
+        <button class="accordion">Block 2</button>
+        <div class="panel"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, autem?</p></div>
+        <button class="accordion">Block 3</button>
+        <div class="panel"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, autem?</p></div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

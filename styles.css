@@ -1,0 +1,355 @@
+section{
+    padding-bottom: 1em;
+    border-bottom: 1px solid #000;
+}
+.inputLine{
+    background-color: #888888;
+    width: 20px;
+    height: 20px;
+}
+.inputLine p{
+    color: #ffffff;
+}
+#borderBlock{
+	width: 200px;
+	height: 200px;
+	background-color: #c4c4c4;
+}
+.menu-item{
+	border: 2px solid #66CDAA;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+.menu-item .submenu{
+	height: 40px;
+	width: 120px;
+	background: green;
+	position: absolute;
+	cursor: pointer;
+}
+#tabs .tab{
+	display: inline-block;
+	padding: 5px 10px;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+}
+#tabs .whiteborder{
+	border: 1px solid #707070;
+	border-radius: 3px 3px 0 0;
+	border-bottom: 1px solid transparent;
+}
+#tabs .content{
+	width: 300px;
+	height: 60px;
+	padding: 10px;
+	border: 1px solid #707070;
+	border-radius: 0 0 3px 3px;
+	position: relative;
+	z-index: 1;
+	top: -1px;
+}
+#tabs .hide{
+	display: none;
+}
+#tabs .show{
+	display: block;
+}
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.8);
+	overflow: auto;
+	width: 100%;
+}
+.modal-content{
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+.close{
+	font-weight: bold;
+	font-size: 28px;
+	color: #aaaaaa;
+	float: right;
+	cursor: pointer;
+}
+#myContainer{
+	width: 400px;
+	height: 400px;
+	position: relative;
+	background-color: green;
+}
+#myAnimation{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background-color: red;
+}
+
+.slideshow-container{
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	margin-top: -22px;
+	width: auto;
+	padding: 16px;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+.next{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+	background-color: rgba(0,0,0,.8);	
+}
+.text{
+	font-size: 12px;
+	color: #f2f2f2;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+.dot{
+	display: inline-block;
+	margin: 0 2px;
+	width: 13px;
+	height: 13px;
+	background-color: #bbbbbb;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+	background-color: #717171;
+}
+.fade{
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+@keyframes fade{
+	from{opacity: .4}
+	to{opacity: 1}
+}
+@-webkit-keyframes fade{
+	from{opacity: .4}
+	to{opacity: 1}
+}
+#listInput{
+	width: 100%;
+	font-size: 16px;
+	padding: 12px 20px 12px 5px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+}
+#myUl{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#myUl li a{
+	border: 1px solid #ddd;
+	margin-top: -1px;
+	background-color: #f6f6f6;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	display: block;
+	color: #222;
+}
+#myUl li a.listLink{
+	background-color: #e2e2e2;
+	cursor: default;
+}
+#myUl li a:hover:not(.listLink){
+	background-color: #eeeeee;
+}
+#myImg{
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#myImg:hover{
+	opacity: 0.7;
+}
+.modalImg{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,.9);
+}
+.imgContent{
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+#caption{
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #cccccc;
+	padding: 10px 0;
+	height: 150px;
+}
+.imgContent, #caption{
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom{
+	from{-webkit-transform: scale(0)}
+	to{-webkit-transform: scale(1)}
+}
+@keyframes zoom{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+.close-x{
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+.close-x:hover, .close-x:focus{
+	color: #bbbbbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+#myProgress{
+	position: relative;
+	width: 150px;
+	height: 30px;
+	background-color: #dddddd;
+}
+#myBar{
+	position: absolute;
+	width: 10%;
+	height: 100%;
+	background-color: #4caf50;
+}
+#lbl{
+	line-height: 30px;
+	text-align: center;
+	color: #ffffff;
+}
+.popupButton{
+	position: relative;
+	display: inline-block;
+	margin: 50px;
+	cursor: pointer;
+}
+.popupText{
+	visibility: hidden;
+	width: 160px;
+	background-color: #555555;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+}
+.popupText:after{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555555;
+}
+.showPopup{
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+@keyframes fadeIn{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+.accordion{
+	background-color: #eeeeee;
+	color: #444444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: .4s;
+}
+.accordion.active, .accordion:hover{
+	background-color: #dddddd;
+}
+.panel{
+	padding: 0 18px;
+	background-color: #ffffff;
+	display: none;
+}
+.showPanel{
+	display: block;
+}
+#toggle1{
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	background-color: green;
+	margin-top: 20px;
+}
+@media only screen and (max-width: 700px){
+	.imgContent{
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
